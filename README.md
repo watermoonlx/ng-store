@@ -13,6 +13,15 @@
 
 ---
 
+- [What is ng-store?](#what-is-ng-store-)
+- [Core Features](#core-features)
+- [Quick Start](#quick-start)
+  * [目标](#--)
+  * [实施](#--)
+- [文档](#--)
+  * [处理异步Action](#----action)
+  * [引入redux-devtools](#--redux-devtools)
+
 ## What is ng-store?
 
 Redux风格的单向数据流管理方案是目前前端最流行的数据管理方案。但Redux属于React社区，与Angular并不兼容。幸运的是Redux本身思想很简单，因此迁移到其他框架中并不困难。Angular社区有很多实现，比如：[NgRx](https://ngrx.io/)、[NgXs](https://www.ngxs.io/)、[angular-redux](https://github.com/angular-redux/store)等等。但这些方案普遍比较复杂，侵入性强，引入成本较高。要在已经开发了一段时间的项目中引入这些方案非常困难。

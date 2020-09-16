@@ -1,0 +1,26 @@
+<div class="container">
+    <nz-list nzBordered
+             class="todo-list">
+        <nz-list-header class="header">
+            <input nz-input
+                   placeholder="New Todo"
+                   [(ngModel)]="inputTodo" />
+            <button nz-button
+                    nzType="primary"
+                    (click)="add()">Add</button>
+        </nz-list-header>
+        <nz-list-item *ngFor="let todo of this.todoItem$|async">
+            <nz-checkbox-wrapper (nzOnChange)="toggleDone(todo)">
+                <label nz-checkbox
+                       [ngModel]="todo.isDone"
+                       [nzDisabled]="todo.isDone">{{ todo.content }}</label>
+            </nz-checkbox-wrapper>
+
+            <ul nz-list-item-actions>
+                <nz-list-item-action>
+                    <a (click)="delete(todo)">delete</a>
+                </nz-list-item-action>
+            </ul>
+        </nz-list-item>
+    </nz-list>
+</div>
